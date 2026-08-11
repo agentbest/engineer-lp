@@ -1,0 +1,671 @@
+<title>エージェントベスト｜未経験からエンジニアへ転職する</title>
+<meta name="description" content="未経験からITエンジニアへ。「未経験OK」の求人は今も多い一方、IT人材は2030年に最大79万人不足する見込みでも、不足しているのは先端領域。入口の選び方で3年後が決まります。現実と、そのうえでの現実的なルートをお伝えします。">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XXMP8Y1B4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1XXMP8Y1B4');
+</script>
+
+<style>
+  :root{
+    --paper:#F4F7FC;
+    --surface:#FFFFFF;
+    --surface-2:#E9EFF8;
+    --ink:#0F1B2D;
+    --ink-soft:#465771;
+    --ink-faint:#7A899E;
+    --line:#DBE4F0;
+    --line-strong:#BFCDE0;
+    --accent:#1F6FEB;
+    --accent-hover:#1659C6;
+    --accent-tint:#E3EDFF;
+    --accent-ink:#15509F;
+    --cy:#0C9384;
+    --cy-tint:#DBF2EF;
+    --warn:#B4761A;
+    --warn-tint:#FCF0DC;
+    --navy:#0A1524;
+    --navy-2:#101E33;
+    --on-navy:#E7EEF9;
+    --on-navy-soft:#93A3BC;
+    --on-navy-line:#1E2E48;
+
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,"Noto Sans JP","Segoe UI",sans-serif;
+    --mono:"SFMono-Regular","SF Mono","Cascadia Code",Consolas,"Roboto Mono","Courier New",monospace;
+
+    --maxw:1120px;
+    --radius:16px;
+    --shadow:0 1px 2px rgba(15,27,45,.05),0 14px 34px -18px rgba(15,27,45,.26);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#0A0F18;--surface:#121C2C;--surface-2:#0F1826;--ink:#E7EEF9;--ink-soft:#A2B0C6;
+      --ink-faint:#72809A;--line:#1F2E45;--line-strong:#2C3E5C;--accent:#5D9DFF;--accent-hover:#7DB2FF;
+      --accent-tint:#122038;--accent-ink:#7DB2FF;--cy:#3FC3B4;--cy-tint:#0D1F1D;
+      --warn:#E0A94A;--warn-tint:#241D0F;--navy:#060B13;--navy-2:#0C1522;
+      --on-navy:#E7EEF9;--on-navy-soft:#8F9FB9;--on-navy-line:#1B2A41;
+      --shadow:0 1px 2px rgba(0,0,0,.5),0 18px 40px -20px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#F4F7FC;--surface:#FFFFFF;--surface-2:#E9EFF8;--ink:#0F1B2D;--ink-soft:#465771;
+    --ink-faint:#7A899E;--line:#DBE4F0;--line-strong:#BFCDE0;--accent:#1F6FEB;--accent-hover:#1659C6;
+    --accent-tint:#E3EDFF;--accent-ink:#15509F;--cy:#0C9384;--cy-tint:#DBF2EF;--warn:#B4761A;--warn-tint:#FCF0DC;
+    --navy:#0A1524;--navy-2:#101E33;--on-navy:#E7EEF9;--on-navy-soft:#93A3BC;--on-navy-line:#1E2E48;
+    --shadow:0 1px 2px rgba(15,27,45,.05),0 14px 34px -18px rgba(15,27,45,.26);
+  }
+  :root[data-theme="dark"]{
+    --paper:#0A0F18;--surface:#121C2C;--surface-2:#0F1826;--ink:#E7EEF9;--ink-soft:#A2B0C6;
+    --ink-faint:#72809A;--line:#1F2E45;--line-strong:#2C3E5C;--accent:#5D9DFF;--accent-hover:#7DB2FF;
+    --accent-tint:#122038;--accent-ink:#7DB2FF;--cy:#3FC3B4;--cy-tint:#0D1F1D;--warn:#E0A94A;--warn-tint:#241D0F;
+    --navy:#060B13;--navy-2:#0C1522;--on-navy:#E7EEF9;--on-navy-soft:#8F9FB9;--on-navy-line:#1B2A41;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 18px 40px -20px rgba(0,0,0,.8);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);line-height:1.8;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,p{margin:0}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .mono{font-family:var(--mono)}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+
+  /* ---------- nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb,var(--paper) 84%,transparent);
+    backdrop-filter:saturate(1.4) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em}
+  .brand .glyph{
+    width:28px;height:28px;border-radius:9px;flex:none;
+    background:linear-gradient(150deg,var(--accent),var(--cy));
+    display:grid;place-items:center;color:#fff;font-family:var(--mono);font-size:.8rem;font-weight:700;
+  }
+  .brand small{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--ink-faint);font-weight:600}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{font-size:.86rem;color:var(--ink-soft);font-weight:700}
+  .nav-links a:hover{color:var(--accent-ink)}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-weight:800;
+    font-size:.9rem;padding:12px 22px;border-radius:999px;cursor:pointer;border:1px solid transparent;
+    transition:transform .15s ease,background .2s ease,box-shadow .2s ease;white-space:nowrap;
+  }
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -10px var(--accent)}
+  .btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--accent)}
+  .btn-lg{padding:16px 32px;font-size:1rem}
+  @media (max-width:900px){.nav-links a:not(.btn){display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;background:var(--navy);color:var(--on-navy);overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(62% 56% at 80% 4%,rgba(93,157,255,.20),transparent 62%),
+      radial-gradient(52% 48% at 4% 96%,rgba(63,195,180,.16),transparent 64%);
+    pointer-events:none;
+  }
+  .hero-dots{
+    position:absolute;inset:0;opacity:.55;pointer-events:none;
+    background-image:radial-gradient(var(--on-navy-line) 1px,transparent 1px);
+    background-size:26px 26px;
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 18%,#000 72%,transparent);
+            mask-image:linear-gradient(180deg,transparent,#000 18%,#000 72%,transparent);
+  }
+  .hero-in{position:relative;padding:76px 0 72px}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;color:#7DB2FF;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+  .hero-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:#7DB2FF;box-shadow:0 0 0 4px rgba(125,178,255,.2)}
+  h1.hero-title{
+    font-weight:900;letter-spacing:-.01em;
+    font-size:clamp(2.1rem,5.8vw,3.8rem);line-height:1.28;margin:22px 0 0;text-wrap:balance;
+  }
+  h1.hero-title .hl{color:#7DB2FF}
+  h1.hero-title .marker{
+    background:linear-gradient(transparent 62%,rgba(63,195,180,.35) 62%);padding:0 .06em;
+  }
+  .hero-lead{margin:26px 0 0;max-width:39em;color:var(--on-navy-soft);font-size:1.04rem}
+  .hero-lead b{color:var(--on-navy);font-weight:800}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 0;align-items:center}
+  .hero-cta .note{font-family:var(--mono);font-size:.72rem;color:var(--on-navy-soft);letter-spacing:.04em}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:30px;margin:44px 0 0;padding:24px 0 0;border-top:1px solid var(--on-navy-line)}
+  .hero-trust .item .n{font-family:var(--mono);font-size:1.55rem;font-weight:700;color:var(--on-navy);font-variant-numeric:tabular-nums}
+  .hero-trust .item .n em{font-style:normal;color:#7DB2FF;font-size:.95rem;margin-left:2px}
+  .hero-trust .item .l{font-size:.76rem;color:var(--on-navy-soft);max-width:15em;line-height:1.6}
+
+  /* hero fork graphic */
+  .fork{margin:54px 0 0;max-width:760px}
+  .fork .cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--on-navy-soft);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+  .fork .cap::before{content:"";width:16px;height:1px;background:#7DB2FF}
+  .fork-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .path{border:1px solid var(--on-navy-line);border-radius:14px;padding:20px 22px;background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:14px}
+  .path .ttl{font-size:.92rem;font-weight:800;color:var(--on-navy);display:flex;align-items:center;gap:9px}
+  .path .ttl .b{font-family:var(--mono);font-size:.58rem;font-weight:700;letter-spacing:.08em;padding:3px 8px;border-radius:5px}
+  .path.bad .ttl .b{background:var(--on-navy-line);color:var(--on-navy-soft)}
+  .path.good .ttl .b{background:#7DB2FF;color:#06101F}
+  .path ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;counter-reset:s}
+  .path li{display:flex;gap:10px;font-size:.8rem;color:var(--on-navy-soft);line-height:1.6;counter-increment:s}
+  .path li::before{content:counter(s);font-family:var(--mono);font-size:.58rem;font-weight:700;flex:none;width:17px;height:17px;border-radius:50%;display:grid;place-items:center;margin-top:3px;border:1px solid var(--on-navy-line)}
+  .path.good li::before{border-color:#7DB2FF;color:#7DB2FF}
+  .path .end{margin-top:auto;padding-top:14px;border-top:1px dashed var(--on-navy-line);font-size:.82rem;font-weight:800}
+  .path.bad .end{color:var(--on-navy-soft)}
+  .path.good .end{color:#3FC3B4}
+  .path.good{border-color:#7DB2FF;box-shadow:0 0 0 1px rgba(125,178,255,.4),0 20px 44px -22px rgba(125,178,255,.55)}
+  @media (max-width:680px){.fork-grid{grid-template-columns:1fr}}
+
+  /* ---------- sections ---------- */
+  section{padding:88px 0}
+  .band{background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:46em}
+  .sec-head h2{font-weight:900;font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.4;letter-spacing:-.01em;text-wrap:balance}
+  .sec-head p{color:var(--ink-soft);font-size:1.01rem}
+  .sec-index{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--accent-ink);text-transform:uppercase;font-weight:700}
+
+  /* reality */
+  .real-quote{font-size:clamp(1.4rem,3.2vw,2.05rem);line-height:1.6;font-weight:900;text-wrap:balance;max-width:22em;letter-spacing:-.01em}
+  .real-quote .u{background:linear-gradient(transparent 64%,var(--accent-tint) 64%);padding:0 .06em}
+  .real-lead{margin-top:24px;max-width:42em;color:var(--ink-soft);font-size:1.01rem}
+  .real-lead b{color:var(--ink);font-weight:800}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+  .sp{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px}
+  .sp .tag{display:inline-flex;font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.1em;padding:4px 10px;border-radius:999px;margin-bottom:14px}
+  .sp.short .tag{background:var(--accent-tint);color:var(--accent-ink)}
+  .sp.over .tag{background:var(--surface-2);color:var(--ink-faint)}
+  .sp h3{font-size:1.1rem;font-weight:900;line-height:1.5;margin-bottom:10px}
+  .sp p{font-size:.93rem;color:var(--ink-soft)}
+  .sp p b{color:var(--ink);font-weight:800}
+  @media (max-width:680px){.split{grid-template-columns:1fr}}
+  .callout{margin-top:26px;background:var(--warn-tint);border:1px solid var(--warn);border-radius:var(--radius);padding:24px 26px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+  .callout .ic{width:34px;height:34px;border-radius:9px;background:var(--warn);color:#fff;display:grid;place-items:center;font-weight:900;flex:none}
+  .callout .t b{display:block;font-size:1.02rem;font-weight:900;margin-bottom:6px;color:var(--ink)}
+  .callout .t{font-size:.93rem;color:var(--ink-soft)}
+  @media (max-width:560px){.callout{grid-template-columns:1fr}}
+
+  /* criteria */
+  .cri-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .cri{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow);transition:transform .2s ease,border-color .2s ease}
+  .cri:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .cri .no{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--accent);line-height:1;opacity:.35}
+  .cri h3{font-size:1.08rem;font-weight:900;margin:14px 0 10px;line-height:1.5}
+  .cri p{font-size:.92rem;color:var(--ink-soft)}
+  .cri p b{color:var(--ink);font-weight:800}
+  @media (max-width:900px){.cri-grid{grid-template-columns:1fr}}
+
+  /* conversion table */
+  .conv-tbl{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .conv-head{display:grid;grid-template-columns:1fr 44px 1fr;gap:12px;padding:16px 26px;background:var(--surface-2);border-bottom:1px solid var(--line);
+    font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;color:var(--ink-faint);font-weight:700;text-transform:uppercase}
+  .conv-head span:nth-child(2){text-align:center}
+  .conv-row{display:grid;grid-template-columns:1fr 44px 1fr;gap:12px;padding:18px 26px;border-bottom:1px solid var(--line);align-items:center}
+  .conv-row:last-child{border-bottom:none}
+  .conv-row .from b{display:block;font-size:.95rem;font-weight:800;color:var(--ink)}
+  .conv-row .from span{font-size:.82rem;color:var(--ink-faint)}
+  .conv-row .ar{text-align:center;color:var(--accent);font-family:var(--mono);font-weight:700;font-size:1.05rem}
+  .conv-row .to b{display:block;font-size:.95rem;font-weight:800;color:var(--accent-ink)}
+  .conv-row .to span{font-size:.82rem;color:var(--ink-soft)}
+  @media (max-width:640px){
+    .conv-head{display:none}
+    .conv-row{grid-template-columns:1fr;gap:6px;padding:20px 22px}
+    .conv-row .ar{text-align:left;font-size:.9rem}
+  }
+
+  /* role cards */
+  .role-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .role{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
+  .role .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .role .kind{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:var(--ink-faint);font-weight:700}
+  .role .lvl{font-family:var(--mono);font-size:.58rem;font-weight:700;letter-spacing:.06em;padding:4px 9px;border-radius:999px;white-space:nowrap;background:var(--accent-tint);color:var(--accent-ink)}
+  .role .lvl.b{background:var(--cy-tint);color:var(--cy)}
+  .role h3{font-size:1.08rem;font-weight:900;line-height:1.5}
+  .role p{font-size:.91rem;color:var(--ink-soft)}
+  .role .tags{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line-strong);display:flex;gap:8px;flex-wrap:wrap}
+  .role .tags span{font-family:var(--mono);font-size:.64rem;font-weight:700;padding:4px 9px;border-radius:6px;background:var(--surface-2);color:var(--ink-soft)}
+  @media (max-width:680px){.role-grid{grid-template-columns:1fr}}
+
+  /* roadmap */
+  .rmap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
+  .rm{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;display:flex;flex-direction:column;gap:10px}
+  .rm .yr{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;color:var(--accent);font-weight:700}
+  .rm h3{font-size:1rem;font-weight:900;line-height:1.5}
+  .rm p{font-size:.85rem;color:var(--ink-soft);line-height:1.75}
+  .rm .bar{height:4px;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--cy));opacity:.25}
+  .rm:nth-child(1) .bar{opacity:1;width:25%}
+  .rm:nth-child(2) .bar{opacity:1;width:50%}
+  .rm:nth-child(3) .bar{opacity:1;width:75%}
+  .rm:nth-child(4) .bar{opacity:1;width:100%}
+  @media (max-width:900px){.rmap{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.rmap{grid-template-columns:1fr}}
+
+  /* study */
+  .study{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+  .st{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+  .st header{padding:20px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+  .st header .mk{font-family:var(--mono);font-weight:800;font-size:1rem;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;flex:none}
+  .st.yes header .mk{background:var(--accent-tint);color:var(--accent-ink)}
+  .st.no header .mk{background:var(--surface-2);color:var(--ink-faint)}
+  .st header h3{font-size:1.05rem;font-weight:900}
+  .st ul{list-style:none;margin:0;padding:20px 26px 26px;display:flex;flex-direction:column;gap:13px}
+  .st li{display:flex;gap:11px;font-size:.92rem;color:var(--ink-soft);line-height:1.75}
+  .st li::before{content:"✓";color:var(--accent);font-weight:800;flex:none}
+  .st.no li::before{content:"×";color:var(--ink-faint)}
+  .st li b{color:var(--ink);font-weight:800}
+  @media (max-width:680px){.study{grid-template-columns:1fr}}
+
+  /* process */
+  .proc{position:relative;margin-top:8px}
+  .proc::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:var(--line-strong)}
+  .step{position:relative;padding:0 0 32px 62px}
+  .step:last-child{padding-bottom:0}
+  .step .marker{position:absolute;left:8px;top:2px;width:24px;height:24px;border-radius:50%;
+    background:var(--surface);border:2px solid var(--line-strong);display:grid;place-items:center;
+    font-family:var(--mono);font-size:.68rem;font-weight:700;color:var(--ink-soft);z-index:1}
+  .step:nth-child(-n+3) .marker{border-color:var(--accent);color:var(--accent)}
+  .step .ph{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--ink-faint)}
+  .step h3{font-size:1.06rem;font-weight:900;margin:4px 0 6px}
+  .step p{color:var(--ink-soft);font-size:.93rem;max-width:40em}
+
+  /* faq */
+  .faq{display:flex;flex-direction:column;gap:12px;max-width:840px}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;transition:border-color .2s}
+  details[open]{border-color:var(--accent)}
+  summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:800;font-size:1rem;display:flex;align-items:center;gap:14px}
+  summary::-webkit-details-marker{display:none}
+  summary .q{font-family:var(--mono);color:var(--accent);font-size:.8rem;flex:none}
+  summary .chev{margin-left:auto;transition:transform .2s;color:var(--ink-faint)}
+  details[open] summary .chev{transform:rotate(180deg)}
+  details p{padding:0 0 20px 34px;color:var(--ink-soft);font-size:.93rem}
+
+  /* final */
+  .final{background:var(--navy);color:var(--on-navy);border-radius:24px;padding:64px 48px;text-align:center;position:relative;overflow:hidden}
+  .final::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(52% 62% at 16% 0%,rgba(93,157,255,.22),transparent 62%),
+    radial-gradient(52% 62% at 88% 100%,rgba(63,195,180,.18),transparent 62%)}
+  .final>*{position:relative}
+  .final .eyebrow{color:#7DB2FF}
+  .final h2{font-weight:900;font-size:clamp(1.7rem,4.2vw,2.8rem);line-height:1.4;margin:16px 0 0;text-wrap:balance;letter-spacing:-.01em}
+  .final p{color:var(--on-navy-soft);margin:18px auto 0;max-width:34em}
+  .final .hero-cta{justify-content:center}
+  @media (max-width:620px){.final{padding:48px 24px;border-radius:18px}}
+
+  /* footer */
+  footer.ft{border-top:1px solid var(--line);padding:44px 0;color:var(--ink-faint);font-size:.8rem}
+  .ft-links{display:flex;flex-wrap:wrap;gap:14px 26px;margin-bottom:24px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+  .ft-links a{color:var(--ink-soft);font-weight:800;font-size:.88rem}
+  .ft-links a:hover{color:var(--accent)}
+  .ft-in{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+  .ft-in .disc{max-width:46em;line-height:1.75}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+</style>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="エージェントベスト">
+      <span class="glyph">AB</span>
+      <span>AGENTBEST<small>ENGINEER CAREER</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#reality">市場のいま</a>
+      <a href="#criteria">入口の選び方</a>
+      <a href="#convert">活きる経験</a>
+      <a href="#roles">目指せる職種</a>
+      <a href="#roadmap">3年の道のり</a>
+      <a href="#faq">よくある質問</a>
+      <a href="https://calendly.com/r_matsuoka" target="_blank" rel="noopener" class="btn btn-primary">無料で相談する</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" style="padding:0">
+    <div class="hero-dots"></div>
+    <div class="wrap hero-in">
+      <span class="hero-eyebrow"><span class="dot"></span>未経験からの エンジニア転職</span>
+      <h1 class="hero-title">「未経験OK」だけで<br>選ぶと、<span class="marker">3年後に困る。</span></h1>
+      <p class="hero-lead">
+        エンジニアになること自体は、いまでも十分に可能です。むずかしいのは、その先。
+        国の試算では2030年にIT人材が最大79万人不足するとされていますが、同じ資料に<b>「従来型のIT人材はむしろ余る」</b>とも書かれています。
+        つまり不足しているのは<b>頭数ではなく、伸びる領域を担える人</b>。
+        だから大事なのは「入れるかどうか」ではなく、<b>入った先で伸びられるかどうか</b>です。ここを一緒に設計します。
+      </p>
+      <div class="hero-cta">
+        <a href="https://calendly.com/r_matsuoka" target="_blank" rel="noopener" class="btn btn-primary btn-lg">無料でキャリア相談する →</a>
+        <a href="#reality" class="btn btn-ghost btn-lg" style="border-color:var(--on-navy-line);color:var(--on-navy)">まず現実を知る</a>
+        <span class="note">相談1分／在職中OK／完全無料</span>
+      </div>
+
+      <div class="hero-trust">
+        <div class="item"><div class="n">79<em>万人</em></div><div class="l">2030年に不足するIT人材（最大推計・経済産業省）</div></div>
+        <div class="item"><div class="n">先端<em>のみ</em></div><div class="l">不足するのは先端IT人材。従来型は余剰と試算</div></div>
+        <div class="item"><div class="n">3<em>年</em></div><div class="l">最初の会社で差がつくまでの期間</div></div>
+        <div class="item"><div class="n">0<em>円</em></div><div class="l">相談から入社後まで費用</div></div>
+      </div>
+
+      <!-- fork graphic -->
+      <div class="fork rv">
+        <div class="cap">FORK — 同じ「未経験入社」でも、3年後は分かれる</div>
+        <div class="fork-grid">
+          <div class="path bad">
+            <div class="ttl"><span class="b">ルート A</span>入口だけで決めた場合</div>
+            <ol>
+              <li>とにかく受かる会社へ入社</li>
+              <li>常駐先でテスト・監視・キッティング中心</li>
+              <li>コードを書く機会がほとんど増えない</li>
+              <li>3年経っても職務経歴書に書ける実績が薄い</li>
+            </ol>
+            <div class="end">→ 転職市場で「未経験扱い」のまま</div>
+          </div>
+          <div class="path good">
+            <div class="ttl"><span class="b">ルート B</span>3年後から逆算した場合</div>
+            <ol>
+              <li>開発工程に入れる案件・チームを条件にする</li>
+              <li>コードレビューと設計に触れられる環境を選ぶ</li>
+              <li>クラウド・モダンな技術構成の現場に入る</li>
+              <li>3年で「作った」と言える実績が積み上がる</li>
+            </ol>
+            <div class="end">→ 自社開発・事業会社への道が開く</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REALITY ============ -->
+  <section class="band" id="reality">
+    <div class="wrap">
+      <p class="sec-index rv">01 — 市場のいま</p>
+      <p class="real-quote rv" style="margin-top:16px">
+        エンジニアは足りていない。<br>でも、<span class="u">足りていない場所</span>は限られている。
+      </p>
+      <p class="real-lead rv">
+        「IT人材が2030年に79万人不足する」という数字は有名です。ただ、その元になった経済産業省の調査には続きがあります。
+        <b>不足するのはAI・データ・クラウド・セキュリティといった先端領域であり、従来型のIT人材はむしろ余ると試算されている</b>——ここまで含めて読む必要があります。
+        未経験からの転職を考えるとき、この非対称性を知っているかどうかで、選ぶ会社が変わります。
+      </p>
+      <div class="split">
+        <div class="sp short rv">
+          <span class="tag">不足している</span>
+          <h3>先端IT人材</h3>
+          <p>クラウド基盤、データ活用、AI、セキュリティ、そして「何を作るか」から関われる開発。<b>ここは今も採用意欲が高く、実務経験があれば年収も伸びます。</b>未経験がいきなり入るのは難しくても、2〜3年で到達できる射程にはあります。</p>
+        </div>
+        <div class="sp over rv">
+          <span class="tag">余ると試算</span>
+          <h3>従来型IT人材</h3>
+          <p>決められた仕様どおりに手を動かす、置き換えの効く工程。<b>ここに3年いても市場価値が上がりにくく、AIによる効率化の影響も受けやすい。</b>「未経験歓迎」の求人にはこの領域が多く含まれます。</p>
+        </div>
+      </div>
+      <div class="callout rv">
+        <span class="ic">!</span>
+        <div class="t">
+          <b>だから私たちは「まず入れればいい」とは言いません。</b>
+          未経験可の求人をただ並べることは誰でもできます。必要なのは、その求人が<b>3年後にどこへ繋がるか</b>を見て選ぶこと。
+          場合によっては「今は転職ではなく、社内でIT側の業務に近づくほうが早い」とお伝えすることもあります。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CRITERIA ============ -->
+  <section id="criteria">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-index">02 — 入口の選び方</span>
+        <h2>未経験の求人は、<br>この3点だけ見れば足ります。</h2>
+        <p>給与や知名度より先に確認すべき条件です。求人票からは読み取れないことも多いため、私たちが現場情報で補います。</p>
+      </div>
+      <div class="cri-grid">
+        <div class="cri rv">
+          <div class="no">01</div>
+          <h3>開発工程に、入れるか</h3>
+          <p>同じ「エンジニア職」でも、実際の業務がテスト・運用監視・ヘルプデスク中心のことがあります。<b>入社1年目のうちに、どの工程を任される想定なのか。</b>ここを面接で必ず確認します。曖昧な回答しか返ってこない求人は、私たちからはおすすめしません。</p>
+        </div>
+        <div class="cri rv">
+          <div class="no">02</div>
+          <h3>教えてくれる人が、いるか</h3>
+          <p>未経験の伸びは、環境で決まります。<b>コードレビューの文化があるか、質問できる先輩が同じチームにいるか。</b>一人で常駐して誰にも聞けない配属は、努力量に関係なく成長が止まります。研修制度の有無より、配属後の体制を見てください。</p>
+        </div>
+        <div class="cri rv">
+          <div class="no">03</div>
+          <h3>技術構成が、古すぎないか</h3>
+          <p>使っている言語・クラウド・開発手法は、そのまま次の転職の持ち札になります。<b>クラウド（AWS等）を触れる、Gitでチーム開発している。</b>この2つが満たされているだけで、3年後の選択肢はかなり変わります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONVERT ============ -->
+  <section class="band" id="convert">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-index">03 — 活きる経験</span>
+        <h2>いまの仕事は、<br>ムダになりません。</h2>
+        <p>未経験採用で見られているのは、プログラミング歴ではなく「仕事の仕方」です。前職の経験は、翻訳すればそのまま評価対象になります。</p>
+      </div>
+      <div class="conv-tbl rv">
+        <div class="conv-head"><span>いまの経験</span><span></span><span>エンジニアの現場での意味</span></div>
+        <div class="conv-row">
+          <div class="from"><b>接客・販売</b><span>クレーム対応、店舗運営</span></div>
+          <div class="ar">→</div>
+          <div class="to"><b>ユーザー視点と、伝える力</b><span>「使う人がどこでつまずくか」を想像できる人は、仕様の穴に気づけます</span></div>
+        </div>
+        <div class="conv-row">
+          <div class="from"><b>営業</b><span>提案、折衝、数値管理</span></div>
+          <div class="ar">→</div>
+          <div class="to"><b>要件を引き出す力</b><span>顧客が本当に困っていることを聞き出す力は、要件定義とそのまま同じ作業です</span></div>
+        </div>
+        <div class="conv-row">
+          <div class="from"><b>事務・バックオフィス</b><span>Excel集計、業務フロー整理</span></div>
+          <div class="ar">→</div>
+          <div class="to"><b>業務理解と、自動化の勘所</b><span>非効率がどこにあるかを知っている人は、社内SE・業務システム領域で強く評価されます</span></div>
+        </div>
+        <div class="conv-row">
+          <div class="from"><b>製造・技術職</b><span>設備保全、品質管理、図面</span></div>
+          <div class="ar">→</div>
+          <div class="to"><b>再現性と、原因を切り分ける力</b><span>不具合を切り分ける思考はデバッグそのもの。制御・IoT領域では実務知識も直接活きます</span></div>
+        </div>
+        <div class="conv-row">
+          <div class="from"><b>医療・介護・教育</b><span>記録、多職種連携</span></div>
+          <div class="ar">→</div>
+          <div class="to"><b>ドメイン知識という武器</b><span>その業界向けSaaSでは、現場を知っている人材が慢性的に不足しています</span></div>
+        </div>
+        <div class="conv-row">
+          <div class="from"><b>物流・小売の管理</b><span>在庫、シフト、拠点運営</span></div>
+          <div class="ar">→</div>
+          <div class="to"><b>データで回す発想</b><span>数字を見て運用を変えてきた経験は、データ活用の入口として評価されます</span></div>
+        </div>
+      </div>
+      <p style="margin-top:22px;font-size:.86rem;color:var(--ink-faint)" class="rv">※ 職務経歴書では、この「翻訳」ができているかどうかで通過率が大きく変わります。書き方から一緒に整えます。</p>
+    </div>
+  </section>
+
+  <!-- ============ ROLES ============ -->
+  <section id="roles">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-index">04 — 目指せる職種</span>
+        <h2>「エンジニア」は、<br>ひとつの職種ではありません。</h2>
+        <p>未経験からの入りやすさと、その後の伸び方は職種で変わります。適性と前職によって、おすすめする入口が変わります。</p>
+      </div>
+      <div class="role-grid">
+        <div class="role rv">
+          <div class="top"><span class="kind">WEB / APPLICATION</span><span class="lvl">難度 高・伸び 大</span></div>
+          <h3>Webアプリケーション開発</h3>
+          <p>自社サービスや受託開発でコードを書く仕事。未経験からの門は狭い一方、入れれば市場価値の伸びが最も速い領域です。ポートフォリオや学習実績が問われます。</p>
+          <div class="tags"><span>要 学習実績</span><span>年収の伸び 大</span><span>リモート多め</span></div>
+        </div>
+        <div class="role rv">
+          <div class="top"><span class="kind">INFRA / CLOUD</span><span class="lvl">入りやすさ ◎</span></div>
+          <h3>インフラ・クラウドエンジニア</h3>
+          <p>サーバー・ネットワーク・クラウド基盤の構築と運用。未経験の入口として最も現実的で、<b>クラウド（AWS等）に触れる案件を選べば、そのまま先端側へ移れます。</b>資格が評価されやすいのも特徴です。</p>
+          <div class="tags"><span>資格が効く</span><span>AWS / Azure</span><span>先端へ接続可</span></div>
+        </div>
+        <div class="role rv">
+          <div class="top"><span class="kind">CORPORATE IT</span><span class="lvl b">前職が効く</span></div>
+          <h3>社内SE・情報システム</h3>
+          <p>自社の業務システムやIT環境を担う仕事。<b>前職の業務知識がそのまま強みになる</b>ため、事務・管理部門出身の方に向きます。働き方が安定しやすい反面、技術の幅は会社次第です。</p>
+          <div class="tags"><span>業務知識が武器</span><span>働き方 安定</span><span>社内調整多め</span></div>
+        </div>
+        <div class="role rv">
+          <div class="top"><span class="kind">QA / SUPPORT</span><span class="lvl b">最初の一歩</span></div>
+          <h3>QA・テクニカルサポート</h3>
+          <p>品質保証やプロダクトの技術サポート。未経験でも入りやすく、<b>製品と開発現場の両方が見える</b>のが利点。ここを足がかりに開発職やPdM側へ移る人もいます。ただし長居しすぎない設計が必要です。</p>
+          <div class="tags"><span>入りやすい</span><span>要 次の一手</span><span>プロダクト理解</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROADMAP ============ -->
+  <section class="band" id="roadmap">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-index">05 — 3年の道のり</span>
+        <h2>いきなり理想の会社は、<br>たぶん狙えません。</h2>
+        <p>そのかわり、2社目で狙えます。未経験からのキャリアは「一発で決める」より「階段を設計する」ほうが確実です。</p>
+      </div>
+      <div class="rmap">
+        <div class="rm rv"><span class="bar"></span><span class="yr">MONTH 0-3</span><h3>入口を決める</h3><p>職種と入口の会社を選び、必要最低限の学習と職務経歴書を整えて内定を取る。ここで背伸びしすぎないことが大事です。</p></div>
+        <div class="rm rv"><span class="bar"></span><span class="yr">YEAR 1</span><h3>現場で使えるようになる</h3><p>チーム開発の作法（Git、レビュー、チケット管理）に慣れる。まずは「一人で一つの機能を任される」状態を目指します。</p></div>
+        <div class="rm rv"><span class="bar"></span><span class="yr">YEAR 2</span><h3>語れる実績をつくる</h3><p>担当した機能・改善を数字で説明できるようにする。クラウドや設計にも手を伸ばし、資格や社内での役割を積み上げます。</p></div>
+        <div class="rm rv"><span class="bar"></span><span class="yr">YEAR 3</span><h3>2社目で、環境を上げる</h3><p>「実務経験3年」は市場で扱いが変わる節目。自社開発企業や事業会社が現実的な射程に入り、年収レンジも上がります。</p></div>
+      </div>
+      <p style="margin-top:26px;font-size:.92rem;color:var(--ink-soft);max-width:44em" class="rv">
+        私たちは、この3年目の転職まで見据えて1社目をご提案します。<b style="color:var(--ink)">入社したら終わり、にはしません。</b>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ STUDY ============ -->
+  <section id="study">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-index">06 — 学習について</span>
+        <h2>スクールに通わないと、<br>ダメですか？</h2>
+        <p>いちばん多いご質問です。結論から言うと、必須ではありません。ただし「何もしないで受かる」わけでもありません。</p>
+      </div>
+      <div class="study">
+        <div class="st yes rv">
+          <header><span class="mk">○</span><h3>やっておくと効くこと</h3></header>
+          <ul>
+            <li><b>小さくても、動くものを1つ作る。</b>規模は問われません。「なぜそう作ったか」を自分の言葉で説明できることのほうが重要です。</li>
+            <li><b>Gitを使ってみる。</b>チーム開発の前提になっている道具。触ったことがあるだけで印象が変わります。</li>
+            <li><b>インフラ志望ならクラウドの資格。</b>AWSの入門資格などは、学習の本気度を客観的に示せる数少ない材料です。</li>
+            <li><b>毎日少しでも続けた記録を残す。</b>継続できる人かどうかは、未経験採用で最も見られている点のひとつです。</li>
+          </ul>
+        </div>
+        <div class="st no rv">
+          <header><span class="mk">×</span><h3>思ったより効かないこと</h3></header>
+          <ul>
+            <li><b>高額なスクールに通うこと自体。</b>通ったことは評価されません。評価されるのは、そこで何を作ったかだけです。</li>
+            <li><b>教材を何周もすること。</b>写経を続けても、面接で話せる材料は増えません。早めに自分で作る側に移ってください。</li>
+            <li><b>言語選びで悩み続けること。</b>最初の言語が何かで人生は決まりません。決めて始めた人が先に進みます。</li>
+            <li><b>資格の数を増やすこと。</b>1つで十分です。2つ目を取る時間があれば、作ったものを1つ増やすほうが効きます。</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:24px;font-size:.92rem;color:var(--ink-soft);max-width:46em" class="rv">
+        なお、当社はスクールの運営も紹介も行っていません。<b style="color:var(--ink)">学習は、必要な分だけで構いません。</b>今のご状況を伺ったうえで、何をどこまでやれば選考に間に合うかを具体的にお伝えします。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="band" id="process">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-index">07 — 支援の流れ</span>
+        <h2>相談から入社後まで、<br>ずっと無料です。</h2>
+        <p>まだ何も決まっていない段階のご相談が、いちばん歓迎です。</p>
+      </div>
+      <div class="proc">
+        <div class="step rv"><span class="marker">01</span><span class="ph">INTERVIEW</span><h3>初回面談</h3><p>今のお仕事、なぜエンジニアを考えているか、生活面の条件をうかがいます。合わないと感じたら、その理由もお伝えします。（オンライン30〜60分）</p></div>
+        <div class="step rv"><span class="marker">02</span><span class="ph">DESIGN</span><h3>入口と3年後の設計</h3><p>職種の選択肢を並べ、どの入口があなたの経験と相性が良いかを整理。3年後の到達点から逆算して方針を決めます。</p></div>
+        <div class="step rv"><span class="marker">03</span><span class="ph">PREPARE</span><h3>学習の当たりをつける・書類作成</h3><p>必要最低限の学習範囲をお伝えし、前職の経験がエンジニア職の言葉で伝わるよう職務経歴書を組み直します。</p></div>
+        <div class="step rv"><span class="marker">04</span><span class="ph">APPLY</span><h3>求人提案・面接対策</h3><p>配属実態まで確認したうえでご紹介。「なぜエンジニアか」への答え方を一緒に固めます。日程調整は代行します。</p></div>
+        <div class="step rv"><span class="marker">05</span><span class="ph">OFFER</span><h3>内定・条件確認</h3><p>年収だけでなく、配属予定・担当工程・研修体制まで書面と口頭で確認したうえで意思決定していただきます。</p></div>
+        <div class="step rv"><span class="marker">06</span><span class="ph">AFTER</span><h3>入社後フォロー</h3><p>最初の半年が一番きつい時期です。詰まったときにいつでも相談できる状態を保ちます。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-index">08 — よくある質問</span>
+        <h2>ご相談の前に。</h2>
+      </div>
+      <div class="faq">
+        <details class="rv"><summary><span class="q">Q1</span>本当に未経験からエンジニアになれますか？<span class="chev">▾</span></summary><p>なれます。ただし「どこでもいいなら入れる」と「伸びる場所に入れる」は別の話です。このページでお伝えしたいのは後者で、入口の選び方次第で3年後の市場価値が大きく変わります。ご状況によっては、いま転職するより社内でIT寄りの業務に移るほうが早い、とお伝えすることもあります。</p></details>
+        <details class="rv"><summary><span class="q">Q2</span>何歳まで可能ですか？<span class="chev">▾</span></summary><p>20代であればポテンシャル採用の枠が広く、選択肢も多くなります。30代は「前職の業務知識が活きる領域」（社内SE、業界特化SaaS、製造・制御など）を軸に組み立てると現実的です。年齢だけで一律に線を引くのではなく、どの入口なら勝負できるかを一緒に探します。</p></details>
+        <details class="rv"><summary><span class="q">Q3</span>年収は下がりますか？<span class="chev">▾</span></summary><p>未経験入社時は一時的に下がるケースが多いのが実情です。ただし実務経験を積んだあとの伸び幅は職種によって大きく異なるため、面談では「入社時」と「3年後」の両方の見込みをお伝えします。下がり幅を最小化する交渉も行います。</p></details>
+        <details class="rv"><summary><span class="q">Q4</span>プログラミングスクールに通うべきですか？<span class="chev">▾</span></summary><p>必須ではありません。評価されるのは通ったことではなく、そこで何を作ったかです。独学で小さなものを作った方が評価されるケースも多くあります。当社はスクールの運営・紹介を行っていないため、中立的にお答えできます。</p></details>
+        <details class="rv"><summary><span class="q">Q5</span>文系・PC作業の経験が少なくても大丈夫ですか？<span class="chev">▾</span></summary><p>文系出身のエンジニアは珍しくありません。ただし、日常的にPCで作業することへの抵抗がないことは前提になります。まずは無料の学習教材を少し触ってみて、苦にならないかを確かめるところから始めるのをおすすめしています。</p></details>
+        <details class="rv"><summary><span class="q">Q6</span>在職中でも相談できますか？費用は？<span class="chev">▾</span></summary><p>はい。ご相談者の多くが在職中です。面談はオンラインで平日夜・休日も対応し、選考の日程調整は代行します。ご相談から入社後のフォローまで、求職者の方に費用は一切かかりません。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL ============ -->
+  <section id="entry">
+    <div class="wrap">
+      <div class="final rv">
+        <span class="eyebrow">GET STARTED — 相談1分・完全無料</span>
+        <h2>「向いているか分からない」<br>の段階で、大丈夫です。</h2>
+        <p>転職するかどうかも決まっていない状態からご相談いただけます。まずは、いまの経験がどこで活きるかを一緒に見てみませんか。</p>
+        <div class="hero-cta">
+          <a href="https://calendly.com/r_matsuoka" target="_blank" rel="noopener" class="btn btn-primary btn-lg">無料でキャリア相談する →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <nav class="ft-links">
+      <a href="https://www.agent-best.net/" target="_blank" rel="noopener">エージェントベスト公式サイト &#8599;</a>
+      <a href="https://jobs.agent-best.net/" target="_blank" rel="noopener">求人検索 &#8599;</a>
+      <a href="https://calendly.com/r_matsuoka" target="_blank" rel="noopener">無料でキャリア相談 &#8599;</a>
+    </nav>
+    <div class="ft-in">
+      <div class="brand"><span class="glyph">AB</span><span>AGENTBEST<small>ENGINEER CAREER</small></span></div>
+      <p class="disc">
+        ※ 「2030年に最大約79万人不足」および「従来型IT人材は需給が緩和（余剰）／先端IT人材が不足」は、経済産業省「IT人材需給に関する調査」（みずほ情報総研 受託）の試算に基づく引用です。将来推計であり、確定した数値ではありません。<br>
+        © AGENTBEST. 未経験からのエンジニア転職支援。
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('.rv');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e,i){e.style.transitionDelay=(Math.min(i%4,3)*60)+'ms';io.observe(e);});
+  })();
+</script>
