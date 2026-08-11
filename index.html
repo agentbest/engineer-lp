@@ -315,6 +315,10 @@
   .rv.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+  /* cross-site links */
+  .ft-sites-title{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;color:var(--ink-faint);font-weight:700;margin:0 0 12px;text-transform:uppercase}
+  .ft-sites-links{margin-bottom:24px}
 </style>
 
 <header class="nav">
@@ -644,6 +648,16 @@
 
 <footer class="ft">
   <div class="wrap">
+    <div class="ft-sites">
+      <p class="ft-sites-title">ほかの特設サイト</p>
+    </div>
+    <nav class="ft-links ft-sites-links">
+      <a href="https://pm.agent-best.net/" target="_blank" rel="noopener">PM特化 転職 &#8599;</a>
+      <a href="https://eng.agent-best.net/" target="_blank" rel="noopener">エンジニア→コンサル転職 &#8599;</a>
+      <a href="https://ma.agent-best.net/" target="_blank" rel="noopener">未経験からM&amp;A &#8599;</a>
+      <a href="https://consul.agent-best.net/" target="_blank" rel="noopener">未経験からコンサル &#8599;</a>
+      <a href="https://student.agent-best.net/" target="_blank" rel="noopener">学生キャリア支援 &#8599;</a>
+    </nav>
     <nav class="ft-links">
       <a href="https://www.agent-best.net/" target="_blank" rel="noopener">エージェントベスト公式サイト &#8599;</a>
       <a href="https://jobs.agent-best.net/" target="_blank" rel="noopener">求人検索 &#8599;</a>
