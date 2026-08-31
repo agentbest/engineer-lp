@@ -2,6 +2,8 @@
 
 - 公開URL: https://engineer.agent-best.net/ （GitHub Pages・HTTPS強制）
 - 構成: `index.html` 1ファイル完結。CSS/JSはインライン、**外部CDNは読み込まない**。`CNAME` あり。
+- ロゴとファビコンだけは画像ファイル（同ディレクトリの `logo.png` / `logo-white.png` / `favicon.ico` / `icon-192.png` / `apple-touch-icon.png`）を参照する。原本は `C:\Users\user\ロゴ素材\`（生成スクリプト `make_assets.py` 付き）。
+- このLPはライト/ダークの両テーマ対応。**ヘッダーのロゴは黒文字版と白文字版の2枚を置き、CSSで出し分けている**（片方だけにすると暗い配色で社名が読めなくなる）。
 
 ## ⚠ 名前が紛らわしいので注意
 
