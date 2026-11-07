@@ -1,13 +1,13 @@
 # engineer-lp — 未経験からエンジニア転職LP（求職者向け）
 
-- 公開URL: https://engineer.agent-best.net/ （GitHub Pages・HTTPS強制）
+- 公開URL: https://engineertenshoku.com/ （GitHub Pages・HTTPS強制）
 - 構成: `index.html` 1ファイル完結。CSS/JSはインライン、**外部CDNは読み込まない**。`CNAME` あり。
 - ロゴとファビコンだけは画像ファイル（同ディレクトリの `logo.png` / `logo-white.png` / `favicon.ico` / `icon-192.png` / `apple-touch-icon.png`）を参照する。原本は `C:\Users\user\ロゴ素材\`（生成スクリプト `make_assets.py` 付き）。
 - このLPはライト/ダークの両テーマ対応。**ヘッダーのロゴは黒文字版と白文字版の2枚を置き、CSSで出し分けている**（片方だけにすると暗い配色で社名が読めなくなる）。
 
 ## ⚠ 名前が紛らわしいので注意
 
-- **これ** ＝ `engineer.agent-best.net` / `agentbest/engineer-lp` / 他業種→**エンジニア**になりたい人向け
+- **これ** ＝ `engineertenshoku.com` / `agentbest/engineer-lp` / 他業種→**エンジニア**になりたい人向け
 - **別物** ＝ `eng.agent-best.net` / `agentbest/engineer-consultant` ＝ **エンジニア→コンサル**
 - 旧 `inexperiencedengineer.agent-best.net`（Tailwind CDN版・2025年制作）の後継。**旧リポジトリの扱いは未決**。削除するならDNSのCNAMEも一緒に消さないと**サブドメイン乗っ取りリスク**がある。301リダイレクト化を推奨として提示済み・返答待ち。
 
